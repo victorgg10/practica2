@@ -1,4 +1,5 @@
-var formulario = document.querySelector("#form")
+//se modifico el id del form por el . y el nombre ya que lo estaba llamado por id y solo tiene  clase
+var formulario = document.querySelector("#formulario")
 
 formulario.onsubmit = function(e) {
 
@@ -10,10 +11,12 @@ formulario.onsubmit = function(e) {
 
   var nombre = n.value
   var edad = e.value
+  //se creo variable para nacionlidad
+ // var na = na.value
 
   var i = na.selectedIndex
   var nacionalidad = na.options[i].value
-  console.log(nombre, edad)
+  console.log(nombre, edad, nacionalidad)
   console.log(nacionalidad)
 
   if (nombre.length === 0) {
@@ -52,7 +55,7 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
+var lista = document.getElementById("lista-de-invitados").value;
 
 var elementoLista = document.createElement("div")
 elementoLista.classList.added("elemento-lista")
